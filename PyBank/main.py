@@ -57,22 +57,22 @@ avg_change = sum_change/(total_mos -1)
 #print outputs to terminal
 print("Financial Analysis")
 print("----------------------------------")
-print("Total Months: " + str(total_mos))
-print("Total: $" + str(total_prof))
-print("Average  Change: $" + str(avg_change))
-print("Greatest Increase in Profits: " + str(max_mo) + "(" + str(max_inc) + ")")
-print("Greatest Decrease in Profits: " + str(min_mo) + "(" + str(min_dec) + ")")
+print(f"Total Months: {total_mos}")
+print(f"Total: ${total_prof}")
+print(f"Average  Change: ${avg_change:.2f}")
+print(f"Greatest Increase in Profits: {max_mo} (${max_inc})")
+print(f"Greatest Decrease in Profits: {min_mo} (${min_dec})")
 
 #create text file and print outputs to text
 text_file = open("Output.txt", "w")
 
 print("Financial Analysis",file=text_file)
 print("----------------------------------",file=text_file)
-print("Total Months: " + str(total_mos),file=text_file)
-print("Total: $",total_prof,file=text_file)
-print("Average  Change: $" + str(avg_change),file=text_file)
-print("Greatest Increase in Profits: " + str(max_mo) + "(" + str(max_inc) + ")",file=text_file)
-print("Greatest Decrease in Profits: " + str(min_mo) + "(" + str(min_dec) + ")",file=text_file)
+print(f"Total Months: {total_mos}",file=text_file)
+print(f"Total: ${total_prof}",file=text_file)
+print(f"Average  Change: ${avg_change:.2f}",file=text_file)
+print(f"Greatest Increase in Profits: {max_mo} (${max_inc})",file=text_file)
+print(f"Greatest Decrease in Profits: {min_mo} (${min_dec})",file=text_file)
 
 #close text file
 text_file.close()
